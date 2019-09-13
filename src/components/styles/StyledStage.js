@@ -8,9 +8,9 @@ grid-template-rows: repeat(
 );
 
 grid-template-columns: repeat(${props => props.width}, 1fr);
-grid-gap: 1px;
+grid-gap: 0px;
 border: 2px solid #333;
 width: 100%;
 max-width: 20vw;
-background: rgba(0,0,0,0.5);
+background: rgba(0,0,0,0.2);
 `
