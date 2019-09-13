@@ -28,7 +28,6 @@ class App extends Component {
     return (
       <div className="App">
       {/* Render the newly fetched data inside of this.state.data */}
-        <p className="App-intro">{this.state.data}</p>
         <Tetris />
       </div>
     )}};
