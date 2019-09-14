@@ -6,13 +6,18 @@
   "dependencies": {
     "concurrently": "^4.1.2",
     "dotenv": "^8.1.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && yarn install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
