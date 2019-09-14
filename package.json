@@ -4,7 +4,6 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "Server.js",
   "dependencies": {
-    "concurrently": "^4.1.2",
     "dotenv": "^8.1.0",
     "express": "^4.17.1"
   },

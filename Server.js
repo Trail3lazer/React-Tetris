@@ -10,10 +10,13 @@ ranks = [{
   lines: 4
 }]
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(express.json());
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+
+// -- API Routes
 app.get('api/ranks', (req, res) => {
   app.json(ranks)
 })
@@ -30,10 +33,13 @@ app.post('api/ranks', (req, res) => {
   }
 })
 
+
+// -- Catch All Route
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build/index.html'));
+  res.sendFile(path.join(__dirname, './client/build/index.html'));
 });
 
-// console.log that your server is up and running
+
+// console.log that server is up and running
 app.listen(port, () => console.log(`Listening on  http://localhost:${port}/`));
 
