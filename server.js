@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'build')));
 
 
-// -- API Routes
+// -- API Routes 
 app.get('api/ranks', (req, res) => {
   app.json(ranks)
 })
