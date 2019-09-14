@@ -13,7 +13,7 @@ ranks = [{
 app.use(express.json());
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 
 // -- API Routes 
@@ -36,7 +36,7 @@ app.post('api/ranks', (req, res) => {
 
 // -- Catch All Route
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
 
