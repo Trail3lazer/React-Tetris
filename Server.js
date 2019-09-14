@@ -36,7 +36,6 @@ app.post('api/ranks', (req, res) => {
 
 // -- Catch All Route
 app.get('/*', (req, res) => {
-  res.send("Got to * route")
   res.sendFile(path.join(__dirname, './client/build/index.html'));
 });
 
