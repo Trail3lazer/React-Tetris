@@ -2,7 +2,20 @@
 const express = require('express');
 const app = express();
 const path = require("path")
+const mongoose = require("mongoose")
 const port = process.env.PORT || 5000;
+
+// init DB
+// DB connection
+//require('dotenv').config()
+
+var db = require("./models");
+var MONGODB_URI = process.env.MONGODB_URI;
+console.log(MONGODB_URI)
+
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true ,useUnifiedTopology: true})
+.then(()=>console.log("DB connected"));
+
 
 ranks = [{
   name: "Player1",
@@ -17,21 +30,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 
 // -- API Routes 
-app.get('api/ranks', (req, res) => {
-  app.json(ranks)
-})
-
-app.post('api/ranks', (req, res) => {
-  const newRank = req.body;
-
-  for (let i in ranks) {
-    if (newRank['score'] > ranks[i]['score']) {
-      ranks[i] = newRank;
-    } else if (i === ranks.length) {
-      ranks.push(newRank);
-    }
-  }
-})
+app.use("./routes/apiRoutes.js")
 
 
 // -- Catch All Route
