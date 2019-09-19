@@ -1,4 +1,4 @@
-const api = (db) => {
+const api = (db, app) => {
     app.get("/api/ranks", function (req, res) {
         // Grab every document in the ranks collection
         db.Rank.find({}).sort({ 'score': -1 })

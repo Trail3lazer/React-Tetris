@@ -4,10 +4,10 @@ const app = express();
 const path = require("path")
 const mongoose = require("mongoose")
 const port = process.env.PORT || 5000;
+const apiRoutes = require("./routes/apiRoutes")
 
 // init DB
-// DB connection
-//require('dotenv').config()
+require('dotenv').config()
 
 var db = require("./models");
 var MONGODB_URI = process.env.MONGODB_URI;
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 
 // -- API Routes 
-app.use("./routes/apiRoutes.js")
+apiRoutes(db, app)
 
 
 // -- Catch All Route
