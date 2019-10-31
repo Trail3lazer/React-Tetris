@@ -1,3 +1,11 @@
+Tetris (Russian: Тетрис [ˈtɛtrʲɪs]; portmanteau of "tetromino" and "tennis") is a tile-matching puzzle video game originally designed and programmed by Soviet Russian software engineer Alexey Pajitnov.[1] The first playable version was completed on June 6, 1984,[2] while he was working for the Dorodnitsyn Computing Centre of the Academy of Science of the Soviet Union in Moscow.[3] He derived its name from combining the Greek numerical prefix tetra- (the falling pieces contain 4 segments) and tennis, Pajitnov's favorite sport.[4][5] The name is also used in-game to refer to the play where four lines are cleared at once.
+
+Tetris was the first game to be exported from the Soviet Union to the United States, where it was published by Spectrum HoloByte for the Commodore 64 and IBM PC. The game is a popular use of tetrominoes, the four-element case of polyominoes, which have been used in popular puzzles since at least 1907. (The name for these figures was given by the mathematician Solomon W. Golomb in 1953.)
+
+The game, or one of its many variants, is available for nearly every video game console and computer operating system, as well as on devices such as graphing calculators, mobile phones, portable media players, PDAs, Network music players, and as an Easter egg on non-media products like oscilloscopes.[6] It has inspired Tetris serving dishes,[7] and it has even been played on the sides of various buildings.[8]
+
+While versions of Tetris were sold for a range of 1980s home computer platforms as well as arcades, it was the successful handheld version for the Game Boy, launched in 1989, that established the game to critics and fans as one of the greatest video games of all time. In January 2010, it was announced that the games in the franchise had sold over 170 million copies—approximately 70 million physical and 100 million paid mobile downloads—making it the second best selling paid-downloaded game of all time behind Minecraft.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
